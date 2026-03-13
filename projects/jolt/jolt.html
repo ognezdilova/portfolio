@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+    <title>JOLT - Olha Gnezdilova</title>
+    <link rel="stylesheet" href="jolt.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="../../index.html" style="text-decoration: none; color: inherit;">
+                <h1 class="logo">Olha Gnezdilova</h1>
+            </a>
+            <ul class="nav-links">
+                <li><a href="../../pages/about/about.html">About</a></li>
+                <li><a href="../../index.html#projects">Projects</a></li>
+                <li><a href="../../pages/contact/contact.html">Contact</a></li>
+            </ul>
+            <a href="https://www.linkedin.com/in/olha-gnezdilova-22678039b/" class="linkedin-icon" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect x="2" y="9" width="4" height="12"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="project-hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-text">
+                <h1>JOLT</h1>
+                <p class="subtitle">Forearm band that allows users with upper limb amputations to control a computer mouse using natural arm gestures.</p>
+            </div>
+        </section>
+
+        <!-- Project Navigation Sidebar -->
+        <nav class="project-nav">
+            <ul class="project-nav-links">
+                <li><a href="#overview">Project Overview</a></li>
+                <li><a href="#impact">Personal Impact</a></li>
+                <li><a href="#gallery">Photo Gallery</a></li>
+                <li><a href="#project-links">Project Links</a></li>
+            </ul>
+        </nav>
+
+        <section class="project-content" id="overview">
+            <div class="content-wrapper">
+                <h2>Project Overview</h2>
+                <p>JOLT is a forearm band that allows users with upper limb amputations or impairments to control a computer mouse using natural arm gestures. By strapping JOLT to the residual limb, users can move the cursor by tilting their arm, click with a joystick button, and toggle their range of motion and sensitivity.</p>
+
+                <h2>How It Works</h2>
+                <p>JOLT uses a gyroscope to detect the rotational velocity of the forearm in real time. These gyroscope readings are filtered and mapped to cursor movement, which is transmitted wirelessly to any computer via Bluetooth HID. The computer sees JOLT as a standard Bluetooth mouse, requiring no drivers or software installation.</p>
+
+                <div class="component-section">
+                    <h3>Cursor Control</h3>
+                    <p><strong>Tilt arm forward/back</strong> → The cursor moves up/down</p>
+                    <p><strong>Tilt arm left/right</strong> → The cursor moves left/right</p>
+                    <p>The cursor continues moving as long as the arm is tilted, and stops when the arm returns to its neutral position.</p>
+                </div>
+
+                <div class="component-section">
+                    <h3>Clicking</h3>
+                    <p><strong>Single press of the joystick button</strong> → The cursor performs a left mouse click</p>
+                    <p>The work is continued on implementing the <strong>EMG sensor</strong> for input control, shifting away from the button to muscle signals.</p>
+                </div>
+
+                <div class="component-section">
+                    <h3>Freeze / Unfreeze</h3>
+                    <p><strong>Toggle switch ON</strong> → The cursor freezes in place</p>
+                    <p><strong>Toggle switch OFF</strong> → The cursor unfreezes and resumes movement</p>
+                </div>
+
+                <h2>Hardware</h2>
+                <table class="hardware-table">
+                    <thead>
+                        <tr>
+                            <th>Component</th>
+                            <th>Purpose</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ESP32 Dev Module</td>
+                            <td>Microcontroller and BLE HID transmission</td>
+                        </tr>
+                        <tr>
+                            <td>MPU-6050 IMU</td>
+                            <td>Gyroscope for arm gesture detection</td>
+                        </tr>
+                        <tr>
+                            <td>Joystick module</td>
+                            <td>Single click input</td>
+                        </tr>
+                        <tr>
+                            <td>Toggle switch</td>
+                            <td>Freeze and unfreeze cursor movement</td>
+                        </tr>
+                        <tr>
+                            <td>Portable USB charger</td>
+                            <td>Power supply</td>
+                        </tr>
+                        <tr>
+                            <td>Breadboard + jumper wires</td>
+                            <td>Prototyping and connections</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h2>Technical Details</h2>
+                <ul class="tech-list">
+                    <li><strong>Microcontroller:</strong> ESP32 (dual core, 240MHz)</li>
+                    <li><strong>Gesture sensing:</strong> MPU-6050 gyroscope</li>
+                    <li><strong>Signal filtering:</strong> Low-pass filter to smooth gyroscope noise</li>
+                    <li><strong>Wireless protocol:</strong> Bluetooth Low Energy HID</li>
+                    <li><strong>Cursor mapping:</strong> Gyro rate scaled and constrained to ±15 pixels per frame at 50Hz</li>
+                    <li><strong>Auto-calibration:</strong> IMU settles over first 50 loop iterations on boot before cursor activates</li>
+                    <li><strong>Companion web app:</strong> Real time device dashboard built in React and TypeScript, deployed on Vercel</li>
+                </ul>
+
+                <h2>Companion Web App</h2>
+                <p>For now, JOLT includes a web-based dashboard accessible from any Chrome or Edge browser. The app connects to JOLT over Web Bluetooth and displays:</p>
+                <ul class="tech-list">
+                    <li>Device connection status</li>
+                    <li>Power and baseline state</li>
+                    <li>Live gyroscope values</li>
+                    <li>Spatial movement visualization</li>
+                </ul>
+
+                <h2>Repository Structure</h2>
+                <pre><code>├── firmware/          # Arduino/ESP32 source code
+├── src/               # React web app source
+│   ├── components/    # UI components
+│   ├── hooks/         # Bluetooth hook
+│   └── types/         # TypeScript definitions
+└── README.md</code></pre>
+
+                <h2>Built With</h2>
+                <div class="tech-tags">
+                    <span class="tech-tag">Arduino IDE</span>
+                    <span class="tech-tag">ESP32 BLE Mouse Library</span>
+                    <span class="tech-tag">React + TypeScript</span>
+                    <span class="tech-tag">Vite</span>
+                    <span class="tech-tag">Framer Motion</span>
+                    <span class="tech-tag">Vercel</span>
+                    <span class="tech-tag">Google AI Studio</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-impact" id="impact">
+            <div class="content-wrapper">
+                <h2>Personal Impact</h2>
+                <p>From the hardware perspective, I integrated a MyoWare 2.0 EMG sensor with an ESP32 microcontroller, designing the signal acquisition pipeline using Arduino IDE 
+                    and calibrated the electrode setup to capture stable muscle activity signals.</p>
+                
+                <p>From the software perspective, I used Arduino IDE to write a firmware to stream EMG data in real time and developed a 
+                    Python pipeline to log and structure biosignal data for future neural network training. </p>
+                
+            </div>
+        </section>
+
+        <section class="project-media" id="gallery">
+            <div class="content-wrapper">
+                <h2>Project Gallery</h2>
+                <div class="gallery-container">
+                    <div class="gallery-image">
+                        <img id="galleryImg" src="images/jolt_protoype.jpg" alt="JOLT Project Image">
+                    </div>
+                    <div class="gallery-controls">
+                        <button class="gallery-btn" id="prevBtn" aria-label="Previous image">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="15 18 9 12 15 6"></polyline>
+                            </svg>
+                        </button>
+                        <span class="gallery-counter" id="galleryCounter">1 / 3</span>
+                        <button class="gallery-btn" id="nextBtn" aria-label="Next image">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <p class="image-caption" id="galleryCaption">JOLT device prototype</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-links" id="project-links">
+            <div class="content-wrapper">
+                <h2>Project Resources</h2>
+                <div class="links-container">
+                    <a href="https://www.youtube.com/watch?v=jgEJv_nCdtU" class="project-link-button" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                            <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                        </svg>
+                        Watch Demo on YouTube
+                    </a>
+                    <a href="https://github.com/CalebBellsmith/Jolt" class="project-link-button" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                        View on GitHub
+                    </a>
+                    <a href="https://jolt-dusky.vercel.app/" class="project-link-button" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                        </svg>
+                        Launch Dashboard
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="back-to-projects">
+            <div class="content-wrapper">
+                <a href="../../index.html#projects" class="back-button">← Back to Projects</a>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Gallery navigation functionality
+        const images = [
+            { src: 'images/jolt_protoype.jpg', caption: 'JOLT device prototype' },
+            { src: 'images/jolt_team1.jpg', caption: 'Device calibration process' },
+            { src: 'images/jolt_team2.jpg', caption: 'EMG data recording process' }
+        ];
+
+        let currentIndex = 0;
+
+        const galleryImg = document.getElementById('galleryImg');
+        const galleryCaption = document.getElementById('galleryCaption');
+        const galleryCounter = document.getElementById('galleryCounter');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+
+        function updateGallery() {
+            galleryImg.src = images[currentIndex].src;
+            galleryCaption.textContent = images[currentIndex].caption;
+            galleryCounter.textContent = `${currentIndex + 1} / ${images.length}`;
+        }
+
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            updateGallery();
+        });
+
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % images.length;
+            updateGallery();
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') {
+                prevBtn.click();
+            } else if (e.key === 'ArrowRight') {
+                nextBtn.click();
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,283 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Alata', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header & Navigation */
+header {
+    background-color: #f5f5f5;
+    padding: 30px 60px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: 60px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 500;
+    color: #000;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #666;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #000;
+}
+
+.linkedin-icon {
+    color: #666;
+    transition: color 0.3s;
+    margin-left: auto;
+}
+
+.linkedin-icon:hover {
+    color: #263650;
+}
+
+/* Contact Hero Section */
+.contact-hero {
+    text-align: center;
+    padding: 80px 60px 60px;
+    background-color: #f5f5f5;
+}
+
+.contact-hero h1 {
+    font-size: 56px;
+    font-weight: 400;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+.contact-hero .subtitle {
+    font-size: 22px;
+    color: #666;
+    font-weight: 300;
+}
+
+/* Content Wrapper */
+.content-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 60px;
+}
+
+/* Contact Content Section */
+.contact-content {
+    padding: 60px 0;
+    background-color: #f5f5f5;
+}
+
+.intro-text {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+/* Contact Info Section */
+.contact-info {
+    margin-bottom: 60px;
+}
+
+.contact-info h2 {
+    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    color: #000;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.info-item {
+    background-color: #eeecec;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.info-item h3 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.info-item p {
+    font-size: 17px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Social Links Section */
+.social-links {
+    margin-bottom: 40px;
+}
+
+.social-links h2 {
+    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    color: #000;
+}
+
+.links-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-link-button {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 18px 30px;
+    background-color: #3d4a5c;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.contact-link-button:hover {
+    background-color: #2d3a4c;
+    transform: translateY(-2px);
+}
+
+.contact-link-button svg {
+    flex-shrink: 0;
+}
+
+/* Back to Home Section */
+.back-to-home {
+    padding: 40px 0 80px;
+    background-color: #f5f5f5;
+}
+
+.back-button {
+    display: inline-block;
+    color: #666;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.back-button:hover {
+    color: #000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        padding: 20px 30px;
+    }
+
+    nav {
+        gap: 30px;
+    }
+
+    .nav-links {
+        gap: 20px;
+    }
+
+    .nav-links a {
+        font-size: 16px;
+    }
+
+    .content-wrapper {
+        padding: 0 30px;
+    }
+
+    .contact-hero {
+        padding: 50px 30px 40px;
+    }
+
+    .contact-hero h1 {
+        font-size: 36px;
+    }
+
+    .contact-hero .subtitle {
+        font-size: 18px;
+    }
+
+    .intro-text {
+        font-size: 16px;
+    }
+
+    .contact-info h2,
+    .social-links h2 {
+        font-size: 26px;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-link-button {
+        font-size: 16px;
+        padding: 15px 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 20px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .contact-hero h1 {
+        font-size: 28px;
+    }
+
+    .contact-hero .subtitle {
+        font-size: 16px;
+    }
+
+    .info-item {
+        padding: 20px;
+    }
+}

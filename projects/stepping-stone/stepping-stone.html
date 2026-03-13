@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+    <title>Stepping Stone - Olha Gnezdilova</title>
+    <link rel="stylesheet" href="stepping-stone.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="../../index.html" style="text-decoration: none; color: inherit;">
+                <h1 class="logo">Olha Gnezdilova</h1>
+            </a>
+            <ul class="nav-links">
+                <li><a href="../../pages/about/about.html">About</a></li>
+                <li><a href="../../index.html#projects">Projects</a></li>
+                <li><a href="../../pages/contact/contact.html">Contact</a></li>
+            </ul>
+            <a href="https://www.linkedin.com/in/olha-gnezdilova-22678039b/" class="linkedin-icon" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect x="2" y="9" width="4" height="12"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="project-hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-text">
+                <h1>STEPPING STONES</h1>
+                <p class="subtitle">Rehabilitation platform that was developed as a part of health Tech Innovation Challenge.</p>
+            </div>
+        </section>
+
+        <!-- Project Navigation Sidebar -->
+        <nav class="project-nav">
+            <ul class="project-nav-links">
+                <li><a href="#overview">Project Overview</a></li>
+                <li><a href="#impact">Personal Impact</a></li>
+                <li><a href="#gallery">Photo Gallery</a></li>
+                <li><a href="#project-links">Project Links</a></li>
+            </ul>
+        </nav>
+
+        <section class="project-content" id="overview">
+            <div class="content-wrapper">
+                <h2>Project Overview</h2>
+                <p>The Stepping Stone Project was developed as part of the Health Tech Innovation Challenge. Our team focused on creating a demo application designed to support elderly cancer patients transitioning from the CCCare Program to a safe and effective at-home exercise routine.</p>
+
+                <h2>Technical Implementation</h2>
+                <p>The demo consisted of two integrated components:</p>
+
+                <div class="component-section">
+                    <h3>1. Frontend Platform Overview</h3>
+                    <p>A digital prototype of the platform was developed using TypeScript, HTML, and JavaScript. This interface demonstrated how patients would interact with the system, access exercise guidance, and receive feedback on their performance.</p>
+                </div>
+
+                <div class="component-section">
+                    <h3>2. Motion Tracking and Data Processing System</h3>
+                    <p>The second component was implemented in Python and focused on real-time motion analysis. The system collected data from an Arduino board, processing both accelerometer and gyroscope signals using a mathematical and algorithmic approach.</p>
+                    
+                    <p>The processed data was designed to integrate into a Python-based backend, where measurement noise could be corrected and movement ranges normalized. This allowed patient motion to be scaled against standardized benchmarks, enabling accurate comparison and personalized feedback.</p>
+                </div>
+
+                <h2>Project Goal</h2>
+                <p>The overall goal of the system was to detect detailed patient movement patterns and ensure exercises were performed safely and correctly, providing measurable, data-driven feedback during independent rehabilitation.</p>
+            </div>
+        </section>
+
+        <section class="project-impact" id="impact">
+            <div class="content-wrapper">
+                <h2>Personal Impact</h2>
+                <p>Participated in the design disscussion and design iteration process, including communication with stakeholders, 
+                    conducting user research, and implementing feedback into the final product. 
+                </p>
+                <p>Was responsible for implementing the motion tracking and data processing system in Python, 
+                    which involved further collecting and analyzing data from an Arduino board to provide real-time feedback on patient movements.
+                </p>    
+            </div>
+        </section>
+
+        <section class="project-media" id="gallery">
+            <div class="content-wrapper">
+                <h2>Project Gallery</h2>
+                <div class="gallery-container">
+                    <div class="gallery-image">
+                        <img id="galleryImg" src="images/TeamPhoto2.jpg" alt="Stepping Stones Project Team">
+                    </div>
+                    <div class="gallery-controls">
+                        <button class="gallery-btn" id="prevBtn" aria-label="Previous image">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="15 18 9 12 15 6"></polyline>
+                            </svg>
+                        </button>
+                        <span class="gallery-counter" id="galleryCounter">1 / 3</span>
+                        <button class="gallery-btn" id="nextBtn" aria-label="Next image">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <p class="image-caption" id="galleryCaption">Stepping Stones project team</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-links" id="project-links">
+            <div class="content-wrapper">
+                <h2>Project Resources</h2>
+                <div class="links-container">
+                    <a href="https://youtu.be/Gt3_H2cLYVI" class="project-link-button" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                            <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                        </svg>
+                        Watch Video Demo
+                    </a>
+                    <a href="https://github.com/ognezdilova/imu-rehabilitation-system" class="project-link-button" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                        View on GitHub
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="back-to-projects">
+            <div class="content-wrapper">
+                <a href="../../index.html#projects" class="back-button">← Back to Projects</a>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Gallery navigation functionality
+        const images = [
+            { src: 'images/TeamPhoto2.jpg', caption: 'Stepping Stones project team' },
+            { src: 'images/steppingstone_mainpage.png', caption: 'Platform main interface' },
+            { src: 'images/steppinstone_persondemo.png', caption: 'User demonstration' }
+        ];
+
+        let currentIndex = 0;
+
+        const galleryImg = document.getElementById('galleryImg');
+        const galleryCaption = document.getElementById('galleryCaption');
+        const galleryCounter = document.getElementById('galleryCounter');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+
+        function updateGallery() {
+            galleryImg.src = images[currentIndex].src;
+            galleryCaption.textContent = images[currentIndex].caption;
+            galleryCounter.textContent = `${currentIndex + 1} / ${images.length}`;
+        }
+
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            updateGallery();
+        });
+
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % images.length;
+            updateGallery();
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') {
+                prevBtn.click();
+            } else if (e.key === 'ArrowRight') {
+                nextBtn.click();
+            }
+        });
+    </script>
+</body>
+</html>
