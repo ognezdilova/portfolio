@@ -9,15 +9,16 @@ html {
 }
 
 body {
-    font-family: 'Alata', sans-serif;
-    background-color: #f5f5f5;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 400;
+    background-color: #F1EEE6;
     color: #333;
     line-height: 1.6;
 }
 
 /* Header & Navigation */
 header {
-    background-color: rgba(245, 245, 245, 0.95);
+    background-color: rgba(241, 238, 230, 0.95);
     padding: 30px 60px;
     position: sticky;
     top: 0;
@@ -36,8 +37,8 @@ nav {
 
 .logo {
     font-size: 24px;
-    font-weight: 500;
-    color: #000;
+    font-weight: 600;
+    color: #5E657B;
 }
 
 .nav-links {
@@ -54,7 +55,7 @@ nav {
 }
 
 .nav-links a:hover {
-    color: #000;
+    color: #210706;
 }
 
 .linkedin-icon {
@@ -64,7 +65,7 @@ nav {
 }
 
 .linkedin-icon:hover {
-    color: #263650;
+    color: #210706;
 }
 
 /* Project Hero Section */
@@ -100,15 +101,15 @@ nav {
 
 .project-hero h1 {
     font-size: 56px;
-    font-weight: 400;
+    font-weight: 600;
     margin-bottom: 20px;
     letter-spacing: 2px;
-    color: #ffffff;
+    color: #F1EEE6;
 }
 
 .project-hero .subtitle {
     font-size: 22px;
-    color: #ffffff;
+    color: #F1EEE6;
     font-weight: 300;
     line-height: 1.6;
 }
@@ -156,15 +157,15 @@ nav {
 /* Project Content Section */
 .project-content {
     padding: 60px 0;
-    background-color: #f5f5f5;
+    background-color: #F1EEE6;
 }
 
 .project-content h2 {
     font-size: 32px;
-    font-weight: 400;
+    font-weight: 600;
     margin-top: 40px;
     margin-bottom: 20px;
-    color: #000;
+    color: #5E657B;
 }
 
 .project-content h2:first-child {
@@ -173,21 +174,21 @@ nav {
 
 .project-content h3 {
     font-size: 24px;
-    font-weight: 500;
+    font-weight: 600;
     margin-top: 25px;
     margin-bottom: 15px;
-    color: #333;
+    color: #5E657B;
 }
 
 .project-content p {
     font-size: 17px;
     line-height: 1.8;
-    color: #444;
+    color: #210706;
     margin-bottom: 20px;
 }
 
 .component-section {
-    background-color: #eeecec;
+    background-color: #E5DFD3;
     padding: 25px;
     border-radius: 8px;
     margin: 25px 0;
@@ -196,34 +197,34 @@ nav {
 /* Project Impact Section */
 .project-impact {
     padding: 60px 0;
-    background-color: #f5f5f5;
+    background-color: #F1EEE6;
 }
 
 .project-impact h2 {
     font-size: 32px;
-    font-weight: 400;
+    font-weight: 600;
     margin-bottom: 20px;
-    color: #000;
+    color: #5E657B;
 }
 
 .project-impact p {
     font-size: 17px;
     line-height: 1.8;
-    color: #444;
+    color: #210706;
     margin-bottom: 20px;
 }
 
 /* Project Media Section */
 .project-media {
     padding: 60px 0;
-    background-color: #f5f5f5;
+    background-color: #F1EEE6;
 }
 
 .project-media h2 {
     font-size: 32px;
-    font-weight: 400;
+    font-weight: 600;
     margin-bottom: 30px;
-    color: #000;
+    color: #5E657B;
 }
 
 .gallery-container {
@@ -258,7 +259,7 @@ nav {
 }
 
 .gallery-btn {
-    background-color: #3d4a5c;
+    background-color: #5E657B;
     color: white;
     border: none;
     width: 50px;
@@ -300,14 +301,14 @@ nav {
 /* Project Links Section */
 .project-links {
     padding: 60px 0;
-    background-color: #f5f5f5;
+    background-color: #F1EEE6;
 }
 
 .project-links h2 {
     font-size: 32px;
-    font-weight: 400;
+    font-weight: 600;
     margin-bottom: 30px;
-    color: #000;
+    color: #5E657B;
 }
 
 .links-container {
@@ -321,7 +322,7 @@ nav {
     align-items: center;
     gap: 15px;
     padding: 18px 30px;
-    background-color: #3d4a5c;
+    background-color: #5E657B;
     color: white;
     text-decoration: none;
     border-radius: 8px;
@@ -342,7 +343,7 @@ nav {
 /* Back to Projects Section */
 .back-to-projects {
     padding: 40px 0 80px;
-    background-color: #f5f5f5;
+    background-color: #F1EEE6;
 }
 
 .back-button {

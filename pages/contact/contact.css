@@ -9,15 +9,16 @@ html {
 }
 
 body {
-    font-family: 'Alata', sans-serif;
-    background-color: #f5f5f5;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 400;
+    background-color: #F1EEE6;
     color: #333;
     line-height: 1.6;
 }
 
 /* Header & Navigation */
 header {
-    background-color: #f5f5f5;
+    background-color: #F1EEE6;
     padding: 30px 60px;
     position: sticky;
     top: 0;
@@ -35,8 +36,8 @@ nav {
 
 .logo {
     font-size: 24px;
-    font-weight: 500;
-    color: #000;
+    font-weight: 600;
+    color: #5E657B;
 }
 
 .nav-links {
@@ -53,7 +54,7 @@ nav {
 }
 
 .nav-links a:hover {
-    color: #000;
+    color: #210706;
 }
 
 .linkedin-icon {
@@ -63,21 +64,21 @@ nav {
 }
 
 .linkedin-icon:hover {
-    color: #263650;
+    color: #210706;
 }
 
 /* Contact Hero Section */
 .contact-hero {
     text-align: center;
     padding: 80px 60px 60px;
-    background-color: #f5f5f5;
+    background-color: #F1EEE6;
 }
 
 .contact-hero h1 {
     font-size: 56px;
-    font-weight: 400;
+    font-weight: 600;
     margin-bottom: 15px;
-    letter-spacing: 2px;
+    color: #891D1A;
 }
 
 .contact-hero .subtitle {
@@ -96,13 +97,13 @@ nav {
 /* Contact Content Section */
 .contact-content {
     padding: 60px 0;
-    background-color: #f5f5f5;
+    background-color: #F1EEE6;
 }
 
 .intro-text {
     font-size: 18px;
     line-height: 1.8;
-    color: #444;
+    color: #210706;
     margin-bottom: 50px;
     text-align: center;
 }
@@ -114,9 +115,9 @@ nav {
 
 .contact-info h2 {
     font-size: 32px;
-    font-weight: 400;
+    font-weight: 600;
     margin-bottom: 30px;
-    color: #000;
+    color: #5E657B;
 }
 
 .info-grid {
@@ -126,21 +127,21 @@ nav {
 }
 
 .info-item {
-    background-color: #eeecec;
+    background-color: #E5DFD3;
     padding: 30px;
     border-radius: 8px;
 }
 
 .info-item h3 {
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 600;
     margin-bottom: 10px;
-    color: #333;
+    color: #5E657B;
 }
 
 .info-item p {
     font-size: 17px;
-    color: #666;
+    color: #210706;
     line-height: 1.6;
 }
 
@@ -151,9 +152,9 @@ nav {
 
 .social-links h2 {
     font-size: 32px;
-    font-weight: 400;
+    font-weight: 600;
     margin-bottom: 30px;
-    color: #000;
+    color: #5E657B;
 }
 
 .links-container {
@@ -167,8 +168,8 @@ nav {
     align-items: center;
     gap: 15px;
     padding: 18px 30px;
-    background-color: #3d4a5c;
-    color: white;
+    background-color: #5E657B;
+    color: #F1EEE6;
     text-decoration: none;
     border-radius: 8px;
     font-size: 18px;
@@ -177,7 +178,7 @@ nav {
 }
 
 .contact-link-button:hover {
-    background-color: #2d3a4c;
+    background-color: #4a5568;
     transform: translateY(-2px);
 }
 
@@ -188,7 +189,7 @@ nav {
 /* Back to Home Section */
 .back-to-home {
     padding: 40px 0 80px;
-    background-color: #f5f5f5;
+    background-color: #F1EEE6;
 }
 
 .back-button {

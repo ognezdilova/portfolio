@@ -9,15 +9,16 @@ html {
 }
 
 body {
-    font-family: 'Alata', sans-serif;
-    background-color: #f5f5f5;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 400;
+    background-color: #F1EEE6;
     color: #333;
     line-height: 1.6;
 }
 
 /* Header & Navigation */
 header {
-    background-color: #f5f5f5;
+    background-color: #F1EEE6;
     padding: 30px 60px;
     position: sticky;
     top: 0;
@@ -35,8 +36,8 @@ nav {
 
 .logo {
     font-size: 24px;
-    font-weight: 500;
-    color: #000;
+    font-weight: 600;
+    color: #5E657B;
 }
 
 .nav-links {
@@ -53,17 +54,17 @@ nav {
 }
 
 .nav-links a:hover {
-    color: #263650;
+    color: #210706;
 }
 
 .linkedin-icon {
-    color: #666;
+    color: #5E657B;
     transition: color 0.3s;
     margin-left: auto;
 }
 
 .linkedin-icon:hover {
-    color: #263650;
+    color: #210706;
 }
 
 /* Hero Section */
@@ -94,14 +95,15 @@ nav {
 
 .hero-content h2 {
     font-size: 48px;
-    font-weight: 400;
+    font-weight: 600;
     margin-bottom: 30px;
-    letter-spacing: 2px;
+    /* letter-spacing: 1px; */
+    color: #891D1A;
 }
 
 .hero-content p {
     font-size: 24px;
-    color: #333;
+    color: #210706;
     line-height: 1.5;
 }
 
@@ -115,7 +117,7 @@ nav {
 .skill-tag {
     display: inline-block;
     background-color: #e8e8e8;
-    color: #333;
+    color: #210706;
     padding: 8px 16px;
     border-radius: 20px;
     font-size: 15px;
@@ -130,8 +132,8 @@ nav {
     display: inline-block;
     margin-top: 30px;
     padding: 12px 30px;
-    background-color: #3d4a5c;
-    color: white;
+    background-color: #891D1A;
+    color: #F1EEE6;
     text-decoration: none;
     border-radius: 25px;
     font-size: 16px;
@@ -140,7 +142,7 @@ nav {
 }
 
 .cta-button:hover {
-    background-color: #2d3a4c;
+    background-color: #681613;
     transform: translateY(-2px);
 }
 
@@ -157,6 +159,128 @@ nav {
     transform: skew(2deg);
 }
 
+/* About Section */
+.about-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 80px;
+    max-width: 1200px;
+    margin: 80px auto 100px;
+    padding: 0 60px;
+}
+
+.about-content {
+    flex: 1;
+}
+
+.about-content h2 {
+    font-size: 48px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #891D1A;
+}
+
+.about-content .intro {
+    font-size: 20px;
+    color: #0D0D0D;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.about-content .description {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.8;
+}
+
+.about-image {
+    flex: 0 0 auto;
+}
+
+.about-image img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+    border-radius: 50%;
+}
+
+/* Skills Section */
+.skills-section {
+    max-width: 1400px;
+    margin: 100px auto 120px;
+    padding: 0 60px;
+}
+
+.skill-row {
+    display: grid;
+    grid-template-columns: 120px 80px 1fr 400px;
+    gap: 40px;
+    align-items: start;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(33, 7, 6, 0.1);
+}
+
+.skill-row:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.skill-number {
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 1;
+    color: #21070677;
+    letter-spacing: -0.02em;
+}
+
+.skill-icon {
+    display: flex;
+    align-items: flex-start;
+    padding-top: 8px;
+}
+
+.skill-icon svg {
+    color: #891D1A;
+    width: 40px;
+    height: 40px;
+}
+
+.skill-content h3 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #5E657B;
+    letter-spacing: -0.01em;
+}
+
+.skill-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.skill-item {
+    display: block;
+    color: #210706;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+.skill-description {
+    padding-top: 8px;
+}
+
+.skill-description p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #210706;
+    opacity: 0.85;
+}
+
 /* Projects Section */
 .projects {
     max-width: 1400px;
@@ -166,9 +290,10 @@ nav {
 
 .projects h2 {
     font-size: 42px;
-    font-weight: 500;
+    font-weight: 600;
     margin-bottom: 60px;
     letter-spacing: normal;
+    color: #5E657B;
 }
 
 .project-grid {
@@ -204,9 +329,9 @@ nav {
 
 .project-card h3 {
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 600;
     margin: 24px 24px 12px;
-    color: #000;
+    color: #5E657B;
 }
 
 .project-card p {
@@ -232,8 +357,36 @@ nav {
 
 /* Responsive Design */
 @media (max-width: 1024px) {
+    .skill-row {
+        grid-template-columns: 100px 70px 1fr 350px;
+        gap: 30px;
+        margin-bottom: 30px;
+        padding-bottom: 30px;
+    }
+
+    .skill-number {
+        font-size: 40px;
+    }
+
+    .skill-icon svg {
+        width: 36px;
+        height: 36px;
+    }
+
+    .skill-content h3 {
+        font-size: 28px;
+    }
+
+    .skill-description p {
+        font-size: 16px;
+    }
+
     .project-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-section {
+        gap: 50px;
     }
 }
 
@@ -263,6 +416,65 @@ nav {
 
     .hero-content p {
         font-size: 20px;
+    }
+
+    .about-section {
+        flex-direction: column-reverse;
+        margin: 40px auto 60px;
+        padding: 0 30px;
+        gap: 40px;
+    }
+
+    .about-content h2 {
+        font-size: 36px;
+    }
+
+    .about-content .intro {
+        font-size: 18px;
+    }
+
+    .about-content .description {
+        font-size: 15px;
+    }
+
+    .about-image img {
+        width: 280px;
+        height: 280px;
+        max-width: 280px;
+        border-radius: 50%;
+    }
+
+    .skills-section {
+        padding: 0 30px;
+        margin: 60px auto 80px;
+    }
+
+    .skill-row {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        margin-bottom: 30px;
+        padding-bottom: 30px;
+    }
+
+    .skill-number {
+        font-size: 32px;
+    }
+
+    .skill-icon {
+        display: none;
+    }
+
+    .skill-content h3 {
+        font-size: 26px;
+        margin-bottom: 16px;
+    }
+
+    .skill-item {
+        font-size: 14px;
+    }
+
+    .skill-description p {
+        font-size: 15px;
     }
 
     .projects {
@@ -299,5 +511,17 @@ nav {
 
     .hero-content p {
         font-size: 18px;
+    }
+
+    .about-content h2 {
+        font-size: 28px;
+    }
+
+    .skill-number {
+        font-size: 28px;
+    }
+
+    .skill-content h3 {
+        font-size: 24px;
     }
 }
